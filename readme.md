@@ -10,28 +10,28 @@ If you make use of this code, please cite the above paper.
 
 The main aim of this code is to take a parallel original and corrected text file (1 sentence per line) and convert it into M2 format, where the edits that transform the former into the latter have been made explicit.
 
-## Example:
-Original:	This are gramamtical sentence .
-Corrected:	This is a grammatical sentence .
-Output M2:	S This are gramamtical sentence .
-			A 1 2|||NA|||is|||REQUIRED|||-NONE-|||0
-			A 2 2|||NA|||a|||REQUIRED|||-NONE-|||0
-			A 2 3|||NA|||grammatical|||REQUIRED|||-NONE-|||0
+## Example:  
+Original: &emsp;&emsp;&emsp; This are gramamtical sentence .  
+Corrected: &emsp;&emsp; This is a grammatical sentence .  
+Output M2: &emsp;&nbsp;&nbsp; S This are gramamtical sentence .  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; A 1 2|||NA|||is|||REQUIRED|||-NONE-|||0  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; A 2 2|||NA|||a|||REQUIRED|||-NONE-|||0  	
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; A 2 3|||NA|||grammatical|||REQUIRED|||-NONE-|||0  
 
-In M2 format, the first line preceded by S contains the original tokenized source sentence. 
-All subsequent lines preceded by A indicate an edit Annotation made to that source sentence. 
+In M2 format, the first line preceded by S contains the original tokenized source sentence.  
+All subsequent lines preceded by A indicate an edit Annotation made to that source sentence.  
 The first field denotes the start and end token offsets of the edit in the source sentence, the second field denotes the error type for the edit (not available in automatic alignment) and the third field contains the tokenized correction string. The next two fields are included for historical reasons, while the last field indicates the id of the annotator.
 
 # Pre-requisites
 
 Although the code was written for Python 3.4, we have also tested it in Python 2.7. It may work in other versions too.
 
-Regardless of which version of Python you use, you will also need to download spaCy: [https://spacy.io/](https://spacy.io/)
+Regardless of which version of Python you use, you will also need to download spaCy: [https://spacy.io/](https://spacy.io/)  
 Instructions on how to install it are here: [https://spacy.io/docs/usage/](https://spacy.io/docs/usage/)
 
-The following will install spaCy for Python3:
-`pip3 install -U spacy`
-`python3 -m spacy.en.download all --force`
+The following will install spaCy for Python3:  
+`pip3 install -U spacy`  
+`python3 -m spacy.en.download all --force`  
 
 # Usage
 
@@ -58,7 +58,7 @@ optional arguments:
                 rules: Use our own rule-based merging strategy (default)
 ```
 
-Included in this distribution is an example original and corrected text file and expected m2 output file.
+Included in this distribution is an example original and corrected text file and expected m2 output file.  
 These shall be used to demonstrate sample usage below.
 
 By default, the script uses the best Damerau-Levenshtein + rules strategy described in the COLING paper. As such, the following command should produce a file called `out_test.m2` in the test directory, which should be identical to `expected_test.m2`.
@@ -74,8 +74,8 @@ The speed of the alignment depends on the options and size of the input parallel
 
 # Contact
 
-If you have any questions, suggestions or bug reports, you can contact the authors at:
-mariano dot felice at cl.cam.ac.uk
-christopher dot bryant at cl.cam.ac.uk
+If you have any questions, suggestions or bug reports, you can contact the authors at:  
+mariano dot felice at cl.cam.ac.uk  
+christopher dot bryant at cl.cam.ac.uk  
 
 
