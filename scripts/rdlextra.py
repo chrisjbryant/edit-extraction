@@ -1,6 +1,28 @@
-# Damerau-Levenshtein algorithm (restricted edit distance version)
+# Copyright (c) 2016 Mariano Felice and Christopher Bryant
+#
+# This file contains an implementation of the Damerau-Levenshtein
+# algorithm (restricted edit distance version) to align two sentences, 
+# as described in the following paper:
+#
+# Mariano Felice, Christopher Bryant and Ted Briscoe. 2016. 
+# Automatic extraction of learner errors in ESL sentences using 
+# linguistically enhanced alignments. In Proceedings of the 26th 
+# International Conference on Computational Linguistics (COLING 2016), 
+# pp. 825-835, Osaka, Japan. Japanese Association for Natural Language 
+# Processing.
+#
+# Please, cite this paper when using this evaluation script in your work.
+#
+# This code is based on an original implementation of the Wagner-Fischer
+# algorithm by Kyle Gorman, available at: https://gist.github.com/kylebgorman/8034009
+# The original license and description are included below.
+#
+# This implementation adds support for token transpositions of arbitrary 
+# length, e.g. A B C --> B C A.
+# 
 
-
+# ORIGINAL LICENSE:
+#
 # Copyright (c) 2013-2016 Kyle Gorman
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
