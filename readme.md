@@ -74,7 +74,7 @@ The speed of the alignment depends on the options and size of the input parallel
 
 # MIT License
 
-Copyright (c) 2017 chrisjbryant
+Copyright (c) 2017 mfelice, chrisjbryant
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
