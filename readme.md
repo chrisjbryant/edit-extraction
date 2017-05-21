@@ -1,5 +1,11 @@
 # Automatic Edit Extraction
 
+## Important
+
+As of May 2017, this repository has largely been superseded by the [ERRor ANnotation Toolkit (ERRANT)](https://github.com/chrisjbryant/errant). We hence recommend using ERRANT for a more up-to-date edit extraction algorithm.
+
+***
+
 This directory contains the minimal amount of code needed to use the automatic edit extraction algorithm described in:
 
 > Mariano Felice, Christopher Bryant, and Ted Briscoe. 2016. [**Automatic extraction of learner errors in esl sentences using linguistically enhanced alignments**](http://aclweb.org/anthology/C/C16/C16-1079.pdf). In Proceedings of COLING 2016, the 26th International Conference on Computational Linguistics: Technical Papers. Osaka, Japan.
